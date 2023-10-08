@@ -1,0 +1,37 @@
+---
+- hosts: kubernetes_master
+  tasks:
+    - name: Install kubeadm
+      apt:
+        name: kubeadm
+        state: present
+    - name: Initialize Kubernetes
+      command: kubeadm init --pod-network-cidr=10.244.0.0/16
+    - name: Get join token
+      command: kubeadm token list | awk '{print $1}'
+      register: join_token
+
+- hosts: kubernetes_worker
+  tasks:
+    - name: Install kubeadm, kubelet, and kubectl
+      apt:
+        name:
+          - kubeadm
+          - kubelet
+          - kubectl
+        state: present
+    - name: Join the Kubernetes cluster
+      command: kubeadm join ${join_token.stdout}
+
+- hosts: all
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+    - name: Start Docker
+      service:
+        name: docker
+        state: started
+    - name: Deploy the web application
+      command: kubectl apply -f deployment.yaml
