@@ -29,6 +29,3 @@
       git:
         repo: https://github.com/akash66sheoran/portfolio.git
         dest: "/home/ubuntu/portfolio"
-
-    - name: Run app.py
-      command: python3 /home/ubuntu/portfolio/app.py
