@@ -27,4 +27,4 @@
 
     - name: Run app.py
       command: flask run
-        chdir: /tmp
+        chdir: /home/ubuntu/portfolio
