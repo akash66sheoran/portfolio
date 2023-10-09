@@ -20,6 +20,11 @@
         name: flask
         state: present
 
+    - name: Create portfolio directory
+      file:
+      path: /home/ubuntu/portfolio
+      state: directory
+
     - name: Pull repository in user home directory
       git:
       repo: https://github.com/akash66sheoran/portfolio.git
