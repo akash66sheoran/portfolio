@@ -11,8 +11,8 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_key_pair" "my_key_pair" {
-  key_name = "my-key-pair"
+resource "aws_key_pair" "portfolio_key" {
+  key_name = "portfolio-key"
   public_key = file("~/.ssh/id_rsa.pub")
 }
 
@@ -35,7 +35,7 @@ resource "aws_security_group" "my_security_group" {
 resource "aws_instance" "portfolio_website" {
   ami = "ami-0f5ee92e2d63afc18"
   instance_type = "t2.micro"
-  key_name = aws_key_pair.my_key_pair.key_name
+  key_name = aws_key_pair.portfolio_key.key_name
   security_groups = ["my-security-group"]
   tags = {
     Name = "portfolio"
