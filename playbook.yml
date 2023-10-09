@@ -22,13 +22,13 @@
 
     - name: Create portfolio directory
       file:
-      path: /home/ubuntu/portfolio
-      state: directory
+        path: /home/ubuntu/portfolio
+        state: directory
 
     - name: Pull repository in user home directory
       git:
-      repo: https://github.com/akash66sheoran/portfolio.git
-      dest: "/home/ubuntu/portfolio"
+        repo: https://github.com/akash66sheoran/portfolio.git
+        dest: "/home/ubuntu/portfolio"
 
     - name: Run app.py
       command: python /home/ubuntu/portfolio/app.py
