@@ -24,3 +24,7 @@ resource "aws_instance" "portfolio_website" {
     Name = "portfolio"
   }
 }
+
+output "public_ip" {
+  value = aws_instance.portfolio_website.public_ip
+}
