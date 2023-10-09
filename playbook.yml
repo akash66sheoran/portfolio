@@ -20,5 +20,11 @@
         name: flask
         state: present
 
+    - name: Copy app.py to remote host
+      copy:
+        src: app.py
+        dest: /tmp/app.py
+
     - name: Run app.py
-      command: python app.py
+      command: flask run
+        chdir: /tmp
