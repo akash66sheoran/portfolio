@@ -31,5 +31,4 @@
       dest: "/home/ubuntu/portfolio"
 
     - name: Run app.py
-      command: flask run
-        chdir: /home/ubuntu/portfolio
+      command: python /home/ubuntu/portfolio/app.py
