@@ -31,4 +31,4 @@
         dest: "/home/ubuntu/portfolio"
 
     - name: Run app.py
-      command: python /home/ubuntu/portfolio/app.py
+      command: python3 /home/ubuntu/portfolio/app.py
