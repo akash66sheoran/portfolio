@@ -16,21 +16,11 @@ resource "aws_key_pair" "my_key_pair" {
   public_key = file("~/.ssh/id_rsa.pub")
 }
 
-resource "aws_instance" "kubernetes_master" {
+resource "aws_instance" "portfolio_website" {
   ami = "ami-0f5ee92e2d63afc18"
   instance_type = "t2.micro"
   key_name = aws_key_pair.my_key_pair.key_name
   tags = {
-    Name = "kubernetes-master"
+    Name = "portfolio"
   }
-}
-
-resource "aws_instance" "kubernetes_worker" {
-  ami = "ami-0f5ee92e2d63afc18"
-  instance_type = "t2.micro"
-  key_name = aws_key_pair.my_key_pair.key_name
-  tags = {
-    Name = "kubernetes-worker"
-  }
-  count = 2
 }
