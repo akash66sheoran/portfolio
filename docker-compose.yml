@@ -1,7 +1,7 @@
 version : "3.3"
 services :
   web :
-     image : akashsheoarn/portfolio:
+     image : akashsheoarn/portfolio
      container_name: my_container
      ports :
          - "5000:5000"
