@@ -7,6 +7,6 @@ RUN pip install gunicorn
 
 COPY . /app
 
-EXPOSE 5000
+EXPOSE 80
 
-CMD gunicorn -b 0.0.0.0:5000 --log-file gunicorn.log app:app
+CMD gunicorn -b 0.0.0.0:80 --log-file gunicorn.log app:app
