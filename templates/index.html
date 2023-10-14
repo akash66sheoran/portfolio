@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash - Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
 </head>
 
 <body>
@@ -23,6 +24,9 @@
                             <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#profiles">Profiles</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#portfolio">Projects</a>
                         </li>
                         <li class="nav-item">
@@ -36,55 +40,100 @@
 
     <section id="hero" class="text-center py-5">
         <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p class="lead">I'm a Web Developer passionate about creating responsive and user-friendly websites.</p>
+            <img src="My photo.png" alt="Your profile photo" class="rounded-circle" , width=150, height=150>
+            <h1 class="my-3">Welcome to My Portfolio</h1>
+            <p class="lead">A DevOps passionate who bridges the gap between development and IT operations to streamline
+                and automate software delivery.</p>
         </div>
     </section>
 
     <section id="about" class="py-5">
         <div class="container">
             <h2>About Me</h2>
-            <p>Describe yourself and your skills here.</p>
+            <p>DevOps Engineer enthusiast with a strong passion for automating and streamlining IT processes. Skilled in
+                implementing robust CI/CD pipelines, orchestrating system administration tasks, architecting
+                infrastructure
+                provisioning, configuration and monitoring. Proven ability to adapt in both independent and
+                collaborative
+                environments with cross-functional teams to identify and resolve issues. Demonstrated success in
+                reducing
+                deployment times by 50%, enhancing system reliability, and boosting team productivity by 25%.</p>
+        </div>
+    </section>
+
+    <section id="profiles" class="py-5">
+        <div class="container">
+            <h2>Online Profiles</h2>
+            <ul class="list-inline">
+                <li class="list-item mb-2">
+                    <i class="fa fa-github fa-lg"></i> <a href="https://github.com/akash66sheoran"
+                        target="_blank">GitHub</a>
+                </li>
+                <li class="list-item mb-2">
+                    <i class="fa fa-linkedin fa-lg"></i> <a href="https://www.linkedin.com/in/akash-sheoran"
+                        target="_blank">LinkedIn</a>
+                </li>
+                <li class="list-item mb-2"><i class="fa fa-code fa-lg"></i> <a href="https://leetcode.com/AkashSheoran/"
+                        target="_blank">Leetcode</a>
+                </li>
+                <li class="list-item mb-2"><i class="fa fa-code fa-lg"></i> <a
+                        href="https://auth.geeksforgeeks.org/user/akash66sheoran" target="_blank">GeeksforGeeks</a>
+                </li>
+            </ul>
         </div>
     </section>
 
     <section id="portfolio" class="py-5">
         <div class="container">
-            <h2>Portfolio</h2>
+            <h2 class="mb-4">Projects</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                        <img src="portfolio-cicd.png" class="card-img-top" alt="Project 1">
                         <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Project 1 description.</p>
+                            <h5 class="card-title">CI/CD Pipeline for a Portfolio Web Application</h5>
+                            <p class="card-text">Developed and implemented a CI/CD pipeline for a portfolio web
+                                application using Jenkins, GitHub, AWS, and Docker. The pipeline
+                                automates the build and deployment process for the web application,
+                                ensuring that new changes are released to production quickly and
+                                reliably.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                        <img src="best-deals.png" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Project 2 description.</p>
+                            <h5 class="card-title">Infrastructure as Code (IaC) Project</h5>
+                            <p class="card-text">Provisioned AWS EC2 server infrastructure using terraform script
+                                and configured it using ansible playbook. Hosted a best-deals web
+                                scraping website that scrapes best deals of a product using
+                                selenium and beautifulsoup.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                        <img src="server-monitoring.jpg" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Project 2 description.</p>
+                            <h5 class="card-title">Server Monitoring</h5>
+                            <p class="card-text">Implemented a server monitoring solution by utilizing Grafana as
+                                the visualization platform and AWS CloudWatch as the data source.
+                                Designed informative dashboards to gain valuable insights into the
+                                performance and health of AWS EC2 servers.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                        <img src="stl.png" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Project 2 description.</p>
+                            <h5 class="card-title">Smart Traffic Lights</h5>
+                            <p class="card-text">Developed a Smart Traffic Light system using machine learning. The
+                                system used variance based algorithm to adjust the timing of traffic
+                                lights dynamically according to traffic flow. This resulted in reduced
+                                traffic congestion and improved traffic flow.</p>
                         </div>
                     </div>
                 </div>
@@ -96,8 +145,9 @@
     <section id="contact" class="py-5">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to email me at <a
-                    href="mailto:your@email.com">your@email.com</a>.
+            <p>If you'd like to get in touch, feel free to contact me:</p>
+            <p><a href="mailto:akash66sheoran@gmail.com">akash66sheoran@gmail.com</a></p>
+            <p><a href="tel:+916239982589">+916239982589</a></p>
         </div>
     </section>
 
